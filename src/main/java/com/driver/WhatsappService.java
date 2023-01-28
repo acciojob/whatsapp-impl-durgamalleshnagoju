@@ -41,7 +41,7 @@ public class WhatsappService {
     }
 
     public int createMessage(String content){
-        Message message = new Message(content);
+        Message message = new Message(1, content);
         return message.getId();
     }
 
