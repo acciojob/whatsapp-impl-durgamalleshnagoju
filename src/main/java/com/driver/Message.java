@@ -3,12 +3,12 @@ package com.driver;
 import java.util.Date;
 
 public class Message {
-    private int id = 0;
+    private int id ;
     private String content;
     private Date timestamp;
 
     public Message(int id , String content){
-        this.id ++;
+        this.id = id;
         this.content = content;
         this.timestamp = new Date();
     }
