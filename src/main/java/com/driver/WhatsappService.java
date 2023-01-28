@@ -59,10 +59,12 @@ public class WhatsappService {
 
     public String changeAdmin(User approver, User user, Group group) throws Exception{
         if(!isValidGroup(group)){
-            throw new RuntimeException("Group does not exist");
+            //throw new RuntimeException("Group does not exist");
+            return "Group does not exist";
         }
         if(!whatsappRepository.getAdminMap().get(group).equals(approver)){
-            throw new RuntimeException("Approver does not have rights");
+            //throw new RuntimeException("Approver does not have rights");
+            return "Approver does not have rights";
         }
         if(!isValidUser(user, group)){
             throw new RuntimeException("User is not a participant");
